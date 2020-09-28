@@ -9,6 +9,7 @@ public class Poojava {
         //c1.carga = 0.3;
         c1.tampa = true;
         c1.status();
+        c1.rabiscar();
         
     }
     
