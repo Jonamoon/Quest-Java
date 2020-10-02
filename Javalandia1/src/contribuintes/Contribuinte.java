@@ -3,7 +3,7 @@ package contribuintes;
 
 import java.time.LocalDate;
 
-public class Contribuente {
+public class Contribuinte {
     public String nome;
     public String cpf;
     public LocalDate dataAdmissao;
@@ -11,7 +11,8 @@ public class Contribuente {
     public boolean status;
     public double salario;
     //contrutor
-    public Contribuente(String nome, String cpf, LocalDate dataAdmissao, double taxaContribuicao, boolean status, double salario) {
+
+    public Contribuinte(String nome, String cpf, LocalDate dataAdmissao, double taxaContribuicao, boolean status, double salario) {
         this.nome = nome;
         this.cpf = cpf;
         this.dataAdmissao = dataAdmissao;
@@ -19,14 +20,17 @@ public class Contribuente {
         this.status = status;
         this.salario = salario;
     }
+    
+    
     //métodos
-    public void calcularContribuicaoMensal(){
+    public double calcularContribuicaoMensal(){
         double contri = this.salario * this.taxaContribuicao;
         //System.out.println("sua Contribuição é:"+contri);
+        return contri;
     }
-    public void imprimirContribuicaoMensal(String nome,double taxaContribuicao){
-        
-	System.out.print("A contribuição mensal de %s%n"+ (nome+taxaContribuicao)+"é de R$ ");	
+    
+    public void imprimirContribuicaoMensal(){
+	System.out.print("A contribuição mensal de: "+this.nome+" é: "+calcularContribuicaoMensal()+" R$");	
 	}
 
     public String getNome() {
@@ -78,7 +82,7 @@ public class Contribuente {
     }
     
     
+    
 }
-
 
 
