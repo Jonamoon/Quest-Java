@@ -1,0 +1,6 @@
+
+package contribuintes;
+
+public class ContribuintePublico {
+    
+}
